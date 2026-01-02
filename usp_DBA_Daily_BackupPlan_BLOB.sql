@@ -145,7 +145,7 @@ BEGIN
     IF @InstanceFolder IS NULL
         SET @InstanceFolder = REPLACE(@@SERVERNAME,'\','-');
 
-    DECLARE @BlobBasePath NVARCHAR(500) = 'https://dtqdevtestblob.blob.core.windows.net/mssql/' + @InstanceFolder + '/backups/';
+    DECLARE @BlobBasePath NVARCHAR(500) = 'https://yourblobstoragecontainer.blob.core.windows.net/mssql/' + @InstanceFolder + '/backups/';
 
     SET @pathFull = @BlobBasePath + 'full/';
     SET @pathDiff = @BlobBasePath + 'differential/';
